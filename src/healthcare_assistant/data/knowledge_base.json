@@ -1,0 +1,100 @@
+[
+  {
+    "id": "cold_001",
+    "symptoms": ["runny nose", "sneezing", "mild sore throat", "cough"],
+    "condition": "Common cold",
+    "advice": "Rest, stay hydrated, and use over-the-counter decongestants or lozenges as needed. Symptoms usually resolve within 7-10 days.",
+    "urgent": false
+  },
+  {
+    "id": "flu_002",
+    "symptoms": ["fever", "chills", "body aches", "fatigue", "dry cough"],
+    "condition": "Seasonal influenza",
+    "advice": "Rest, drink fluids, and take fever-reducing medication like acetaminophen. See a doctor if fever is high or lasts more than 3 days.",
+    "urgent": false
+  },
+  {
+    "id": "migraine_003",
+    "symptoms": ["throbbing headache", "sensitivity to light", "nausea", "visual aura"],
+    "condition": "Migraine",
+    "advice": "Rest in a dark, quiet room, apply a cold compress, and consider an over-the-counter pain reliever. Consult a doctor for frequent or severe migraines.",
+    "urgent": false
+  },
+  {
+    "id": "tension_headache_004",
+    "symptoms": ["dull headache", "tightness around forehead", "neck tension"],
+    "condition": "Tension headache",
+    "advice": "Try relaxation techniques, stay hydrated, and take a mild pain reliever if needed. Persistent headaches should be evaluated by a doctor.",
+    "urgent": false
+  },
+  {
+    "id": "allergic_rhinitis_005",
+    "symptoms": ["itchy eyes", "sneezing", "nasal congestion", "watery eyes"],
+    "condition": "Allergic rhinitis",
+    "advice": "Avoid known allergens, consider an antihistamine, and use saline nasal spray. See a doctor if symptoms are persistent or severe.",
+    "urgent": false
+  },
+  {
+    "id": "gastroenteritis_006",
+    "symptoms": ["diarrhea", "vomiting", "stomach cramps", "nausea"],
+    "condition": "Gastroenteritis (food poisoning)",
+    "advice": "Stay hydrated with small sips of water or oral rehydration solution, and rest. Seek care if there are signs of severe dehydration or blood in stool.",
+    "urgent": true
+  },
+  {
+    "id": "uti_007",
+    "symptoms": ["burning urination", "frequent urination", "pelvic discomfort"],
+    "condition": "Urinary tract infection",
+    "advice": "Drink plenty of water and see a doctor soon, as a UTI typically requires antibiotics for proper treatment.",
+    "urgent": true
+  },
+  {
+    "id": "dehydration_008",
+    "symptoms": ["dry mouth", "dizziness", "dark urine", "fatigue"],
+    "condition": "Mild dehydration",
+    "advice": "Drink water or an electrolyte solution steadily throughout the day and rest. Seek care if dizziness is severe or persistent.",
+    "urgent": false
+  },
+  {
+    "id": "sprained_ankle_009",
+    "symptoms": ["ankle swelling", "pain when walking", "bruising", "joint stiffness"],
+    "condition": "Sprained ankle",
+    "advice": "Follow the RICE method: rest, ice, compression, and elevation. See a doctor if you cannot bear weight or swelling is severe.",
+    "urgent": false
+  },
+  {
+    "id": "insomnia_010",
+    "symptoms": ["difficulty falling asleep", "waking up frequently", "daytime fatigue"],
+    "condition": "Insomnia",
+    "advice": "Maintain a consistent sleep schedule, limit screen time before bed, and avoid caffeine late in the day. Consult a doctor if it persists beyond a few weeks.",
+    "urgent": false
+  },
+  {
+    "id": "mild_anxiety_011",
+    "symptoms": ["restlessness", "racing thoughts", "rapid heartbeat", "difficulty concentrating"],
+    "condition": "Mild anxiety symptoms",
+    "advice": "Try slow breathing exercises, reduce caffeine intake, and consider talking to a mental health professional if symptoms persist.",
+    "urgent": false
+  },
+  {
+    "id": "minor_burn_012",
+    "symptoms": ["skin redness", "localized pain", "mild swelling after heat contact"],
+    "condition": "Minor (first-degree) burn",
+    "advice": "Cool the area under running water for 10-15 minutes, keep it clean, and avoid ice or butter. Seek care for large or blistering burns.",
+    "urgent": true
+  },
+  {
+    "id": "lower_back_strain_013",
+    "symptoms": ["lower back pain", "muscle stiffness", "pain after lifting"],
+    "condition": "Lower back strain",
+    "advice": "Rest briefly, apply ice then heat, and do gentle stretching. See a doctor if pain radiates down the leg or persists beyond a couple of weeks.",
+    "urgent": false
+  },
+  {
+    "id": "sore_throat_014",
+    "symptoms": ["throat pain", "difficulty swallowing", "hoarseness"],
+    "condition": "Sore throat (pharyngitis)",
+    "advice": "Gargle with warm salt water, drink warm fluids, and use throat lozenges. See a doctor if it persists more than a week or is accompanied by high fever.",
+    "urgent": false
+  }
+]

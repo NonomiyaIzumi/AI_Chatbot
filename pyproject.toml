@@ -1,0 +1,42 @@
+[project]
+name = "healthcare-assistant"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "NonomiyaIzumi", email = "rinchan1707@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "google-genai>=1.0.0",
+    "loguru>=0.7",
+    "numpy>=1.26",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.4",
+]
+
+[project.scripts]
+healthcare-assistant = "healthcare_assistant:main"
+
+[build-system]
+requires = ["uv_build>=0.8.23,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=3.7",
+    "pyright>=1.1",
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[tool.ruff]
+line-length = 100
+src = ["src"]
+
+[tool.pyright]
+include = ["src", "scripts", "tests"]
+typeCheckingMode = "basic"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
