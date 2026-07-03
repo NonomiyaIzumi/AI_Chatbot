@@ -24,6 +24,7 @@ class HealthcareAssistant:
             )
         ]
         dispatch = build_dispatch(user_id, self.settings.storage.db_path)
+        collected_text: list[str] = []
 
         for _ in range(self.settings.assistant.max_function_call_rounds):
             resp = self.client.models.generate_content(
@@ -35,9 +36,14 @@ class HealthcareAssistant:
                     automatic_function_calling=types.AutomaticFunctionCallingConfig(disable=True),
                 ),
             )
+            # A single turn can contain both a text part (the actual answer) and a
+            # function_call part (e.g. logging that answer) — keep the text from every
+            # round, since the final round's text is often just the trailing disclaimer.
+            if resp.text:
+                collected_text.append(resp.text)
 
             if not resp.function_calls:
-                return resp.text or ""
+                return "\n\n".join(collected_text)
 
             model_content = resp.candidates[0].content  # type: ignore[index]
             assert model_content is not None
@@ -59,4 +65,5 @@ class HealthcareAssistant:
                 )
 
         logger.warning("Max function-call rounds reached without a final answer")
-        return "I couldn't finish that after several tool calls — please rephrase or consult a clinician."
+        fallback = "I couldn't finish that after several tool calls — please rephrase or consult a clinician."
+        return "\n\n".join([*collected_text, fallback])

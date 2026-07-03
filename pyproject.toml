@@ -8,15 +8,18 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "fastapi>=0.115",
     "google-genai>=1.0.0",
     "loguru>=0.7",
     "numpy>=1.26",
     "pydantic>=2.7",
     "pydantic-settings>=2.4",
+    "uvicorn[standard]>=0.30",
 ]
 
 [project.scripts]
 healthcare-assistant = "healthcare_assistant:main"
+healthcare-assistant-web = "healthcare_assistant.webapp:run"
 
 [build-system]
 requires = ["uv_build>=0.8.23,<0.9.0"]

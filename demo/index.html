@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Healthcare Assistant — Live Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Healthcare Assistant</h1>
+      <p class="disclaimer">
+        Educational demo only &mdash; not a medical diagnosis. Always consult a qualified
+        healthcare professional for real medical concerns.
+      </p>
+    </header>
+
+    <section id="key-panel" class="key-panel">
+      <p>
+        This demo calls the Gemini API directly from your browser using <strong>your own</strong>
+        API key. The key is kept only in this tab's memory (never stored, never sent anywhere
+        except Google's API) and is cleared when you refresh the page.
+      </p>
+      <p>
+        Get a free key from
+        <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Google AI Studio</a>.
+      </p>
+      <form id="key-form">
+        <input id="key-input" type="password" placeholder="Paste your Gemini API key" autocomplete="off" required />
+        <button type="submit">Start chatting</button>
+      </form>
+      <p id="key-error" class="key-error"></p>
+    </section>
+
+    <main id="chat" class="chat hidden"></main>
+
+    <form id="chat-form" class="composer hidden">
+      <input
+        id="message-input"
+        type="text"
+        placeholder="Describe your symptoms..."
+        autocomplete="off"
+        required
+      />
+      <button type="submit">Send</button>
+    </form>
+
+    <p class="footnote">
+      Source code: <a href="https://github.com/NonomiyaIzumi/AI_Chatbot" target="_blank" rel="noopener">github.com/NonomiyaIzumi/AI_Chatbot</a>
+    </p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

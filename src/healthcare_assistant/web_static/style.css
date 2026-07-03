@@ -1,0 +1,131 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --text: #1a1f2b;
+  --muted: #5b6472;
+  --accent: #2f6fed;
+  --user-bubble: #2f6fed;
+  --user-text: #ffffff;
+  --assistant-bubble: #eef1f6;
+  --assistant-text: #1a1f2b;
+  --border: #dde2ea;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14161c;
+    --surface: #1c1f27;
+    --text: #ecedf0;
+    --muted: #9aa3af;
+    --accent: #5b8ff9;
+    --user-bubble: #3b6fe0;
+    --user-text: #ffffff;
+    --assistant-bubble: #262a34;
+    --assistant-text: #ecedf0;
+    --border: #2a2e38;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.4rem;
+}
+
+.disclaimer {
+  margin: 0 0 1rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+}
+
+.chat {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.5rem 0;
+}
+
+.bubble {
+  max-width: 80%;
+  padding: 0.6rem 0.9rem;
+  border-radius: 12px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  font-size: 0.95rem;
+}
+
+.bubble.user {
+  align-self: flex-end;
+  background: var(--user-bubble);
+  color: var(--user-text);
+  border-bottom-right-radius: 2px;
+}
+
+.bubble.assistant {
+  align-self: flex-start;
+  background: var(--assistant-bubble);
+  color: var(--assistant-text);
+  border-bottom-left-radius: 2px;
+}
+
+.bubble.pending {
+  opacity: 0.6;
+}
+
+.composer {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.composer input {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.composer button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.composer button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

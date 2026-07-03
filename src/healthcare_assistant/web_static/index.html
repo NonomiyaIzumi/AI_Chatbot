@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Healthcare Assistant</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Healthcare Assistant</h1>
+      <p class="disclaimer">
+        Educational demo only &mdash; not a medical diagnosis. Always consult a qualified
+        healthcare professional for real medical concerns.
+      </p>
+    </header>
+
+    <main id="chat" class="chat"></main>
+
+    <form id="chat-form" class="composer">
+      <input
+        id="message-input"
+        type="text"
+        placeholder="Describe your symptoms..."
+        autocomplete="off"
+        required
+      />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
